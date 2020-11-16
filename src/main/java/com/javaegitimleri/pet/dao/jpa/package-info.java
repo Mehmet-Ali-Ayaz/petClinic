@@ -1,0 +1,1 @@
+package com.javaegitimleri.pet.dao.jpa;
