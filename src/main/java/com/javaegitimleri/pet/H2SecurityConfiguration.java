@@ -1,4 +1,4 @@
-package com.javaegitimleri;
+package com.javaegitimleri.pet;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
