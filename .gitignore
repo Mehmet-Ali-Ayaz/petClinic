@@ -23,4 +23,5 @@
 hs_err_pid*
 *.gz
 #idea
-*.idea/
+*.idea/*
+petclinic.iml
