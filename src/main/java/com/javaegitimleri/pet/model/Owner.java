@@ -17,18 +17,18 @@ import javax.xml.bind.annotation.XmlTransient;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "t_owner")
+@Table(name="t_owner")
 @XmlRootElement
 public class Owner {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "petClinicSeqGen")
-	@SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="petClinicSeqGen")
+	@SequenceGenerator(name="petClinicSeqGen",sequenceName="petclinic_sequence")
 	private Long id;
-	@Column(name = "first_name")
+	@Column(name="first_name")
 	private String firstName;
-	@Column(name = "last_name")
+	@Column(name="last_name")
 	private String lastName;
-	@OneToMany(mappedBy = "owner")
+	@OneToMany(mappedBy="owner")
 	private Set<Pet> pets = new HashSet<>();
 
 	public Long getId() {
@@ -69,5 +69,6 @@ public class Owner {
 	public String toString() {
 		return "Owner [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
+
 
 }
