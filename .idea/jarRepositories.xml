@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="spring-milestone" />
+      <option name="name" value="Spring Milestone" />
+      <option name="url" value="https://nexus.tools.tilburytech.net/repository/EPRepositoryGroup/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="spring-snapshot" />
       <option name="name" value="Spring Snapshot" />
       <option name="url" value="https://repo.spring.io/snapshot" />
@@ -17,9 +22,24 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="spring-snapshot" />
+      <option name="name" value="Spring Snapshot" />
+      <option name="url" value="https://nexus.tools.tilburytech.net/repository/EPRepositoryGroup/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://nexus.tools.tilburytech.net/repository/EPRepositoryGroup/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="rabbit-milestone" />
+      <option name="name" value="Rabbit Milestone" />
+      <option name="url" value="https://nexus.tools.tilburytech.net/repository/EPRepositoryGroup/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />

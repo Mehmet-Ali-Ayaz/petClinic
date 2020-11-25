@@ -15,6 +15,7 @@ public class H2SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.headers().frameOptions().disable();
 	}
 	
-	
+
+
 
 }
