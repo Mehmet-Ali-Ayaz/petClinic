@@ -13,13 +13,12 @@ import org.springframework.stereotype.Repository;
 import com.javaegitimleri.pet.dao.OwnerRepository;
 import com.javaegitimleri.pet.model.Owner;
 
-
 @Repository
 public class OwnerRepositoryJdbcImpl implements OwnerRepository {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	private RowMapper rowMapper = new RowMapper<Owner>() {
+	private RowMapper<Owner> rowMapper = new RowMapper<Owner>() {
 
 		@Override
 		public Owner mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -45,7 +44,7 @@ public class OwnerRepositoryJdbcImpl implements OwnerRepository {
 
 	@Override
 	public List<Owner> findByLastName(String lastName) {
-		String sql = "select id, first_name, last_name from t_owner where last_name like ?";
+		String sql = "select id,first_name,last_name from t_owner where last_name like ?";
 		return jdbcTemplate.query(sql, rowMapper, "%" + lastName + "%");
 	}
 
@@ -63,9 +62,8 @@ public class OwnerRepositoryJdbcImpl implements OwnerRepository {
 
 	@Override
 	public void delete(Long id) {
-		String sql = "delete from t_owner where id=?";
-		jdbcTemplate.update(sql, id);
-
+		String sql = "delete from t_owner where id = ?";
+		jdbcTemplate.update(sql,id);
 	}
 
 }

@@ -6,11 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.support.BasicAuthorizationInterceptor;
 import org.springframework.web.client.HttpClientErrorException;
@@ -22,7 +17,7 @@ import com.javaegitimleri.pet.model.Owner;
 public class PetclinicRestControllerTests {
 
 	private RestTemplate restTemplate;
-
+/*
 	@Before
 	public void setUp() {
 		restTemplate = new RestTemplate();
@@ -93,6 +88,6 @@ public class PetclinicRestControllerTests {
 				Matchers.containsInAnyOrder("Kenan", "Ali", "Yılmaz", "Muharrem", "Murat"));
 
 	}
-	
+	*/
 
 }
