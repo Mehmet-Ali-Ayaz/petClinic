@@ -19,8 +19,8 @@
 		<c:forEach items="${owners}" var="owner" varStatus="status">
 			<tr bgcolor=${status.index % 2 == 0?'white':'lightgray'}>
 				<td>${owner.id}</td>
-				<td>${owner.firstname}</td>
-				<td>${owner.lastname}</td>
+				<td>${owner.firstName}</td>
+				<td>${owner.lastName}</td>
 			</tr>
 		</c:forEach>
 	</table>

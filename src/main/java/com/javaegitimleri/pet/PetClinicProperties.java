@@ -4,8 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix="petclinic")
 public class PetClinicProperties {
-	
-	private boolean displayOwnersWithPets =false;
+	private boolean displayOwnersWithPets = false;
 
 	public boolean isDisplayOwnersWithPets() {
 		return displayOwnersWithPets;
@@ -14,6 +13,4 @@ public class PetClinicProperties {
 	public void setDisplayOwnersWithPets(boolean displayOwnersWithPets) {
 		this.displayOwnersWithPets = displayOwnersWithPets;
 	}
-	
-
 }
