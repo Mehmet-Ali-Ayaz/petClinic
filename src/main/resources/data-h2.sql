@@ -1,3 +1,9 @@
+insert into users values ('user1', '{bcrypt}$2a$10$F4axtw/hCvwXt7mFwds2Xuyk.K3gi.NFn0MwDrQGgRwYRwvpU9bLO', true);
+insert into users values ('user2', '{bcrypt}$2a$10$TXa5FRJX3AdHPfRccLTyGuEw/93.KOUbBKrCa9z04a5cc3O8VL.7S', true);
+insert into users values ('user3', '{bcrypt}$2a$10$51QB.2B.yihNNHav.l4WzOvdZVPIqTD8iTd8nLJGzxocrShvJKjqa', true);
+
+
+
 INSERT INTO t_owner (id,first_name,last_name) VALUES (1, 'Ziya', 'Ferit');
 INSERT INTO t_owner (id,first_name,last_name) VALUES (2, 'Beşir', 'Dal');
 INSERT INTO t_owner (id,first_name,last_name) VALUES (3, 'Eda', 'Rize');
@@ -23,9 +29,7 @@ INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (11, 'Twetty', '2000-03-0
 INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (12, 'Tarçın', '2000-06-24', 8);
 INSERT INTO t_pet (id,name,birth_date,owner_id) VALUES (13, 'Sarı', '2002-06-08', 9);
 
-INSERT INTO USERS VALUES('user1','{noop}secret',TRUE);
-INSERT INTO USERS VALUES('user2','{noop}secret',TRUE);
-INSERT INTO USERS VALUES('user3','{noop}secret',TRUE);
+
 
 INSERT INTO AUTHORITIES VALUES('user1','ROLE_USER');
 INSERT INTO AUTHORITIES VALUES('user2','ROLE_USER');
