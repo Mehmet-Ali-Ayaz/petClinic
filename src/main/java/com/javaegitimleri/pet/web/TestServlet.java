@@ -1,5 +1,7 @@
 package com.javaegitimleri.pet.web;
 
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -20,4 +22,7 @@ public class TestServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
+
+    public abstract static class AbstractSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    }
 }

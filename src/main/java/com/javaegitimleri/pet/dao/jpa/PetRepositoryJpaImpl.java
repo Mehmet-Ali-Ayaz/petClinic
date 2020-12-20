@@ -49,7 +49,7 @@ public class PetRepositoryJpaImpl implements PetRepository {
 	@Override
 	public void deleteByOwnerId(Long ownerId) {
 		// TODO Auto-generated method stub
-		entityManager.createQuery("delete from Pet where owner.id=:ownerId=").setParameter("ownerId", ownerId).executeUpdate();
+		entityManager.createQuery("delete from Pet where owner.id=:ownerId").setParameter("ownerId", ownerId).executeUpdate();
 
 	}
 
