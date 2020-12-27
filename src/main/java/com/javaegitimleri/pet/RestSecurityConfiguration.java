@@ -14,7 +14,7 @@ public class RestSecurityConfiguration extends AbstractSecurityConfiguration {
     protected void configure(HttpSecurity http) throws Exception {
         //super.configure(http);
         http.antMatcher("/rest/**");
-        http.authorizeRequests().antMatchers("/rest/**").access("hasRole('EDITOR')");
+       // http.authorizeRequests().antMatchers("/rest/**").access("hasRole('EDITOR')");
         http.csrf().disable();
         http.httpBasic();
 
