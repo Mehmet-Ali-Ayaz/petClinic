@@ -1,12 +1,17 @@
-package com.javaegitimleri.petclinic.security;
+package com.javaegitimleri.petclinic;
+import java.util.List;
+
+import com.javaegitimleri.pet.model.Owner;
 import com.javaegitimleri.pet.service.PetClinicService;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.access.AccessDeniedException;
+
 import org.springframework.security.authentication.TestingAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,14 +20,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(properties="spring.profiles.active=dev")
-class PetClinicSecurityWithAuthTokenTests {
+class PetClinicSecurityWithValidAuthTokenTests {
 
     @Autowired
     private PetClinicService petClinicService;
 
     @Before
     public void setUp() {
-        TestingAuthenticationToken auth = new TestingAuthenticationToken("user", "secret","ROLE_XXX");
+        TestingAuthenticationToken auth = new TestingAuthenticationToken("xxx", "secret","ROLE_USER");
         SecurityContextHolder.getContext().setAuthentication(auth);
     }
 
@@ -31,8 +36,8 @@ class PetClinicSecurityWithAuthTokenTests {
         SecurityContextHolder.clearContext();
     }
 
-    @Test(expected=AccessDeniedException.class)
+    @Test
     public void testFindOwners() {
-        petClinicService.findOwners();
-    }
-}
+        List<Owner> owners = petClinicService.findOwners();
+        MatcherAssert.assertThat(owners.size(), Matchers.equalTo(10));
+    }}

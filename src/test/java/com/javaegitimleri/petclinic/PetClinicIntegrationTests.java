@@ -1,2 +1,4 @@
-package com.javaegitimleri.petclinic;public class PetClinicIntegrationTests {
+package com.javaegitimleri.petclinic;
+
+public class PetClinicIntegrationTests {
 }
