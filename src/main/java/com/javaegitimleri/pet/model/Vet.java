@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="t_vet")
-public class Vet {
+public class Vet extends BaseEntity {
     @NotEmpty
     @Column(name="first_name")
     private String firstName;
