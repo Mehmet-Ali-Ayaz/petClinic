@@ -22,5 +22,5 @@ public interface PetClinicService {
     List<Vet> findVets();
     Vet findVet(Long id) throws VetNotFoundException;
 
-    void update(Owner owner);
+
 }

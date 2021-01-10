@@ -1,4 +1,4 @@
-package com.javaegitimleri.pet.dao.mem;
+package com.javaegitimleri.petclinic.dao.mem;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -8,9 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
-import com.javaegitimleri.pet.dao.OwnerRepository;
+import com.javaegitimleri.petclinic.dao.OwnerRepository;
 import com.javaegitimleri.pet.model.Owner;
 
 @Repository

@@ -1,4 +1,4 @@
-package com.javaegitimleri.pet.dao.jdbc;
+package com.javaegitimleri.petclinic.dao.jdbc;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.javaegitimleri.pet.dao.PetRepository;
+import com.javaegitimleri.petclinic.dao.PetRepository;
 import com.javaegitimleri.pet.model.Pet;
 
 

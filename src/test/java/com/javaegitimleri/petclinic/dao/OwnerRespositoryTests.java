@@ -1,4 +1,4 @@
-package com.javaegitimleri.pet.dao;
+package com.javaegitimleri.petclinic.dao;
 
 
 import com.javaegitimleri.pet.model.Owner;
@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceException;
-import javax.swing.text.html.parser.Entity;
 import javax.transaction.Transactional;
 
 @RunWith(SpringRunner.class)

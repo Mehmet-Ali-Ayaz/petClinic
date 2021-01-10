@@ -1,4 +1,4 @@
-package com.javaegitimleri.pet.dao.jpa;
+package com.javaegitimleri.petclinic.dao.jpa;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.javaegitimleri.pet.dao.PetRepository;
+import com.javaegitimleri.petclinic.dao.PetRepository;
 import com.javaegitimleri.pet.model.Pet;
 
 @Repository("petRepository")

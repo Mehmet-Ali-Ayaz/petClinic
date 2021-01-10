@@ -2,13 +2,14 @@ package com.javaegitimleri.pet.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-
 
 @Entity
 @Table(name="t_vet")
 public class Vet extends BaseEntity {
+
     @NotEmpty
     @Column(name="first_name")
     private String firstName;
@@ -32,4 +33,6 @@ public class Vet extends BaseEntity {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+
 }

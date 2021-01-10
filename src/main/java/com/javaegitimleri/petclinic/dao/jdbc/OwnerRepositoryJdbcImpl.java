@@ -1,4 +1,4 @@
-package com.javaegitimleri.pet.dao.jdbc;
+package com.javaegitimleri.petclinic.dao.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.javaegitimleri.pet.dao.OwnerRepository;
+import com.javaegitimleri.petclinic.dao.OwnerRepository;
 import com.javaegitimleri.pet.model.Owner;
 
 @Repository
