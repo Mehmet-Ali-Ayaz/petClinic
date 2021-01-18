@@ -5,9 +5,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import com.javaegitimleri.petclinic.dao.OwnerRepository;
-import com.javaegitimleri.petclinic.dao.PetRepository;
-import com.javaegitimleri.petclinic.dao.jpa.VetRepository;
 import com.javaegitimleri.pet.exception.OwnerNotFoundException;
 import com.javaegitimleri.pet.model.Owner;
 import com.javaegitimleri.pet.model.Vet;
@@ -20,6 +17,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
+
+import com.javaegitimleri.pet.dao.OwnerRepository;
+import com.javaegitimleri.pet.dao.PetRepository;
+import com.javaegitimleri.pet.dao.jpa.VetRepository;
 
 
 @Validated

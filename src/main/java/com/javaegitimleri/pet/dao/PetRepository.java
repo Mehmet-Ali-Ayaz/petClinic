@@ -1,4 +1,4 @@
-package com.javaegitimleri.petclinic.dao;
+package com.javaegitimleri.pet.dao;
 
 import java.util.List;
 

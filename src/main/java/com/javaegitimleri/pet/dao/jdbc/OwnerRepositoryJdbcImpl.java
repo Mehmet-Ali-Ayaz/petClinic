@@ -1,16 +1,16 @@
-package com.javaegitimleri.petclinic.dao.jdbc;
+package com.javaegitimleri.pet.dao.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.javaegitimleri.pet.dao.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.javaegitimleri.petclinic.dao.OwnerRepository;
 import com.javaegitimleri.pet.model.Owner;
 
 @Repository
