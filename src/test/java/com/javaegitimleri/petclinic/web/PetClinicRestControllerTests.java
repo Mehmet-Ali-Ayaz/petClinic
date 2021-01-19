@@ -108,7 +108,7 @@ public class PetClinicRestControllerTests {
         ResponseEntity<Owner> responseEntity2 = restTemplate.getForEntity("http://localhost:8080/rest/owner/1", Owner.class);
         MatcherAssert.assertThat(responseEntity2.getStatusCodeValue(), Matchers.equalTo(404));
     }
-
+      /*
     @Test
     public void testServiceLevelValidation() {
         Owner owner = new Owner();
@@ -119,4 +119,7 @@ public class PetClinicRestControllerTests {
 
         MatcherAssert.assertThat(responseEntity.getStatusCode(), Matchers.equalTo(HttpStatus.PRECONDITION_FAILED));
     }
+    */
+
+
 }

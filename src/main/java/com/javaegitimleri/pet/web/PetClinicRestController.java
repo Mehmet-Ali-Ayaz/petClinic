@@ -8,6 +8,7 @@ import com.javaegitimleri.pet.exception.OwnerNotFoundException;
 import com.javaegitimleri.pet.model.Owner;
 import com.javaegitimleri.pet.service.PetClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Constraint;
+import javax.validation.ConstraintViolationException;
 
 
 @RestController
@@ -31,8 +34,10 @@ public class PetClinicRestController {
 	@Autowired
 	private PetClinicService petClinicService;
 
+	@Cacheable("allOwners")
 	@RequestMapping(method = RequestMethod.GET, value = "/owners")
 	public ResponseEntity<List<Owner>> getOwners() {
+		System.out.println(">>>>>inside getOwners....");
 		List<Owner> owners = petClinicService.findOwners();
 		return ResponseEntity.ok(owners);
 	}
@@ -75,6 +80,8 @@ public class PetClinicRestController {
 			Long id = owner.getId();
 			URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
 			return ResponseEntity.created(location).build();
+		}catch (ConstraintViolationException EX){
+			return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).build();
 		} catch (Exception ex) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
